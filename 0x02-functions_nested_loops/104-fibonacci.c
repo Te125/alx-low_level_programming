@@ -5,7 +5,7 @@
  *
  * Purpose - no hardcode
  *
- * Return:  (Success)
+ * Return: (Success)
  */
 
 int main(void)
@@ -18,7 +18,7 @@ int main(void)
 	unsigned long int bef2;
 	unsigned long int aft1;
 	unsigned long int aft2;
-	
+
 	printf("%lu", bef);
 	for (i = 1; i < 91; i++)
 	{
@@ -38,8 +38,8 @@ int main(void)
 		aft1 = aft1 + bef1;
 		bef1 = aft1 - bef1;
 		aft2 = aft2 + bef2;
-		bef2 = aft2 - bef2;
+		bet2 = aft2 - bef2;
 	}
-	printf("\n");
+	print("\n");
 	return (0);
 }
