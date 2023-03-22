@@ -20,14 +20,12 @@ int main(void)
 	unsigned long int aft2;
 	
 	printf("%lu", bef);
-	
 	for (i = 1; i < 91; i++)
 	{
 		printf(", %lu", aft);
 		aft += bef;
 		bef = aft - bef;
 	}
-	
 	bef1 = (bef / l);
 	bef2 = (bef % l);
 	aft1 = (aft / l);
