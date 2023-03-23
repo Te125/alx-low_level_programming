@@ -6,21 +6,22 @@
  */
 int main(void)
 {
-	int n, m;
+	int i = 48;
+	int j;
+	int cal = 44;
+	int sp = 32;
 
-	for (n = 48; n <= 56; n++)
+	for (; i <= 57; i++)
 	{
-		for (m = 49; m <= 57; m++)
+		j = i + 1;
+		for (; j <= 57; j++);
 		{
-			if  (m > n)
+			putchar (i);
+			putchar (j);
+			if (i != 56 || (i == 56 && j != 57))
 			{
-				putchar(n);
-				putcharm(m);
-				if (n != 56 || m != 57)
-				{
-					putchar(',');
-					putchar(' ');
-				}
+				putchar (cal);
+				putchar (sp);
 			}
 		}
 	}
