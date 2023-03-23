@@ -6,25 +6,24 @@
  */
 int main(void)
 {
-	int i = 48;
-	int j;
-	int cal = 44;
-	int sp = 32;
-
-	for (; i <= 57; i++)
+	int n, m;
+	for (n = 48; n <= 56; n++)
 	{
-		j = i + 1;
-		for (; j <= 57; j++);
+		for (m = 49; m <= 57; m++)
 		{
-			putchar (i);
-			putchar (j);
-			if (i != 56 || (i == 56 && j != 57))
+			if (m > n)
 			{
-				putchar (cal);
-				putchar (sp);
+				putchar(n);
+				putchar(m);
+				if (n != 56 || m != 57)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
-	putchar('\n');
+	putchar ('\n');
+
 	return (0);
 }
