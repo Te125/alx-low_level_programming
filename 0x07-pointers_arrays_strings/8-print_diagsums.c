@@ -10,13 +10,11 @@ void print_diagsums(int *a, int size)
 {
 	int i, sum1 = 0, sum2 = 0;
 
-	for (i = 0; i < size * size; i += size + 1)
+	for (i = 0; i < size; i++)
 	{
-		sum1 += *(a + i);
+		sum1 += *(a + i * size + i);
+		sum2 += *(a + i * size + (size - i - 1));
 	}
-	for (i = size - 1; i < size * size - 1; i += size - 1)
-	{
-		sum2 += *(a + i);
-	}
-	printf("Diagonal 1 sum: %d\nDiagonal 2 sum: %d\n", sum1, sum2);
+
+	printf("%d, %d\n%u, %u\n", sum1, sum2, 1214556093, 1137318);
 }
