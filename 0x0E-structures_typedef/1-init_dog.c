@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * init_dog - initializes a variable 
+ * init_dog - initializes a variable
  * @d: pointer
  * @name: name of dog
  * @age: age of dog
