@@ -10,40 +10,23 @@
 size_t free_listint_safe(listint_t **h)
 {
 	size_t count = 0;
-	listint_t *current, *next, *tortoise, *hare;
+	listint_t *current, *next;
 
 	if (h == NULL || *h == NULL)
 		return (0);
 
-	tortoise = *h;
-	hare = (*h)->next;
-
-	while (hare != NULL && hare < hare->next)
-	{
-		current = tortoise;
-		tortoise = tortoise->next;
-		hare = hare->next;
-		next = hare->next;
-
-		free(current);
-		count++;
-
-		if (hare == tortoise)
-		{
-			free(hare);
-			count++;
-			break;
-		}
-
-		current = hare;
-		hare = next;
-		tortoise = tortoise->next;
-
-		free(current);
-		count++;
-	}
-
+	current = *h;
 	*h = NULL;
+
+	while (current != NULL)
+	{
+		count++;
+		next = current->next;
+		free(current);
+		if (next >= current)
+			break;
+		current = next;
+	}
 
 	return (count);
 }
