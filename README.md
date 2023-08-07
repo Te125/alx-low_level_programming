@@ -6,12 +6,10 @@ that had its own repository.
 Take your time and carefully go through to see how each task was carefully handled
 
 
-https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/5/2d3bd90dbd365ede3ceb65a418608862481703cc.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230807%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230807T142040Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=f6373a3417dff0d9cb8947b56de0c5e51157df947b09cd70f17935fabc0b3905
 
 
 
-
-
+ 
 
 0x00. C - Hello, World
 0x01. C - Variables, if, else, while
