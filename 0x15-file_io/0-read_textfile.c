@@ -23,24 +23,20 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-	buf = malloc(sizeof(char) * letters);
-	if (buf == NULL)
+	else
 	{
-		close(fd);
-		return (0);
+		buf = malloc(sizeof(char) * letters);
+		if (buf == NULL)
+		{
+			return (0);
+		}
+		else
+		{
+			len = read(fd, buf, letters);
+			lent = write(STDOUT_FILENO, buf, len);
+		}
 	}
-	len = read(fd, buf, letters);
-	close(fd);
-	if (len == -1)
-	{
-		free(buf);
-		return (0);
-	}
-	lent = write(STDOUT_FILENO, buf, len);
 	free(buf);
-	if (len != lent)
-	{
-		return (0);
-	}
+	close(fd);
 	return (lent);
 }
