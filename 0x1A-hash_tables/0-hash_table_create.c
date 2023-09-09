@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * hash-table_create - function that creates a hash
+ * hash_table_create - function that creates a hash
  * @size: size of the array
  *
  * Return: pointer to new hashtable, NULL if fails
@@ -27,5 +27,5 @@ hash_table_t *hash_table_create(unsigned long int size)
 	{
 		hash->array[p] = NULL;
 	}
-	return(hash);
+	return (hash);
 }
